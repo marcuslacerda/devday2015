@@ -48,7 +48,7 @@ Esse comando irá gerar um output com status do seu servidor elasticserach, como
 ```
 
 
-```json
+```javascript
 {
   "created_at": "Fri Oct 02 20:26:12 +0000 2015",
   "text": "RT @sadserver: Introducing Elastic DevNull",
