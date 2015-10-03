@@ -46,3 +46,15 @@ Esse comando irá gerar um output com status do seu servidor elasticserach, como
   "tagline": "You Know, for Search"
 }
 ```
+
+
+```json
+{
+  "created_at": "Fri Oct 02 20:26:12 +0000 2015",
+  "text": "RT @sadserver: Introducing Elastic DevNull",
+  "user": {
+    "name": "Marcus Lacerda",
+    "screen_name": "mlacerda_cit"
+  }
+}
+```
