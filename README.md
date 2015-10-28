@@ -41,29 +41,14 @@ Esse comando irá gerar um output com status do seu servidor elasticserach, como
 }
 ```
 
-# Logstach
 
-## Logstach twitter
+```javascript
+{
+  "created_at": "Fri Oct 02 20:26:12 +0000 2015",
+  "text": "RT @sadserver: Introducing Elastic DevNull",
+  "user": {
+    "name": "Marcus Lacerda",
+    "screen_name": "mlacerda_cit"
+  }
+}
 ```
-wget https://download.elastic.co/logstash/logstash/logstash-1.5.4.tar.gz
-tar -xf logstash-1.5.4.tar.gz
-./logstash-1.5.4/bin/logstash --verbose -f logstash/logstash-twitter.conf
-
-```
-
-
-## Kibana
-wget https://download.elastic.co/kibana/kibana/kibana-4.1.2-linux-x64.tar.gz
-tar -xf kibana-4.1.2-linux-x64.tar.gz
-./kibana-4.1.2-darwin-x64/bin/kibana
-
-
-#config index twitter
-curl -XDELETE localhost:9200/_template/twitter
-curl -XPUT -H "Content-Type: application/json" --data @twitter_template.json localhost:9200/_template/twitter
-
-
-# Outras dicas
-
-Instalar o plugin head para facilitar na administração dos índices
-./elasticsearch-1.7.2/bin/plugin -install mobz/elasticsearch-head
