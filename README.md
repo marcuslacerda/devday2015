@@ -4,7 +4,7 @@ Código e anotações sobre apresentação do [DEVDAY 2015](http://devday.devisl
 
 A apresentação pode ser vista no link: [Monitoramento em tempo real com Elasticsearch e Kibana](https://docs.google.com/presentation/d/1bMvYYQh8v0BkwQHtedOkId9yrw5G99gz9AMuyFAR29Y/pub?start=false&loop=false&delayms=3000)
 
-![Image of Yaktocat](https://drive.google.com/open?id=0Byk2tq48uRJPVHlfZDVrS0hwRTQ)
+<iframe src="https://drive.google.com/a/ciandt.com/file/d/0Byk2tq48uRJPVHlfZDVrS0hwRTQ/preview" width="640" height="480"></iframe>
 
 
 ## Referências
