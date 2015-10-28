@@ -4,31 +4,25 @@ Código e anotações sobre apresentação do [DEVDAY 2015](http://devday.devisl
 
 A apresentação pode ser vista no link: [Monitoramento em tempo real com Elasticsearch e Kibana](https://goo.gl/sm5scO)
 
-## Prerequisitos
-Os seguites softwares devem ser instalados:
+Apresentação do Rodrigo Domingues sobre [Arquitetura Incremanetal] (http://pt.slideshare.net/RodrigoStefaniDoming/qcon-rio-2015-arquitetura-incremental) de um projeto de 1 milhão de linhas de código.
 
+
+# Prerequisitos
+* Testes realizados utilizando Mac OS X
+* Java 8
+
+# Elasticsearch
 ## Start ambiente 
 ```
-boot2docker ip
-boot2docker init
-boot2docker ssh
+wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.tar.gz
+tar -xf elasticsearch-1.7.2.tar.gz
+./elasticsearch-1.7.2/bin/elasticsearch
 ```
 
-Após iniciar ambiente, será necessário iniciar os conteiners para elasticsearch e kibana
+Em uma outra console executar uma verificação se o servidor está escutando na porta 9200, usando o comando abaixo.
 ```
-docker pull elasticsearch
-docker run --name=es -d -p 9200:9200 elasticsearch
-docker run  --name=kibana --link es:elasticsearch -d -p 5601:5601 kibana
+curl localhost:9200
 ```
-
-Para realizar um teste, execute os comandos abaixo:
-```
-export DOCKER_IP=`boot2docker ip`  
-export DOCKER_HOST=`boot2docker socket`
-curl $DOCKER_IP:9200
-````
-
-http://192.168.59.103:9200
 
 Esse comando irá gerar um output com status do seu servidor elasticserach, como:
 ```
@@ -46,3 +40,30 @@ Esse comando irá gerar um output com status do seu servidor elasticserach, como
   "tagline": "You Know, for Search"
 }
 ```
+
+# Logstach
+
+## Logstach twitter
+```
+wget https://download.elastic.co/logstash/logstash/logstash-1.5.4.tar.gz
+tar -xf logstash-1.5.4.tar.gz
+./logstash-1.5.4/bin/logstash --verbose -f logstash/logstash-twitter.conf
+
+```
+
+
+## Kibana
+wget https://download.elastic.co/kibana/kibana/kibana-4.1.2-linux-x64.tar.gz
+tar -xf kibana-4.1.2-linux-x64.tar.gz
+./kibana-4.1.2-darwin-x64/bin/kibana
+
+
+#config index twitter
+curl -XDELETE localhost:9200/_template/twitter
+curl -XPUT -H "Content-Type: application/json" --data @twitter_template.json localhost:9200/_template/twitter
+
+
+# Outras dicas
+
+Instalar o plugin head para facilitar na administração dos índices
+./elasticsearch-1.7.2/bin/plugin -install mobz/elasticsearch-head
