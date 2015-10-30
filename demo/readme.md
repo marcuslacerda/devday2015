@@ -13,6 +13,7 @@ Siga os comandos abaixo para fazer o downloado do elasticsearch (versão 1.7.2) 
 ```
 wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.tar.gz
 tar -xf elasticsearch-1.7.2.tar.gz
+cp -r conf/elasticsearch/sample_data/* elasticsearch-1.7.2/data/
 ./elasticsearch-1.7.2/bin/elasticsearch
 ```
 
@@ -54,7 +55,7 @@ Na sequência siga os comandos abaixo para fazer o downloado do elasticsearch (v
 ```
 wget https://download.elastic.co/logstash/logstash/logstash-1.5.4.tar.gz
 tar -xf logstash-1.5.4.tar.gz
-./logstash-1.5.4/bin/logstash --verbose -f logstash/logstash-twitter.conf
+./logstash-1.5.4/bin/logstash --verbose -f conf/logstash/logstash-twitter.conf
 
 ```
 
