@@ -13,7 +13,7 @@ Siga os comandos abaixo para fazer o downloado do elasticsearch (versão 1.7.2) 
 ```
 wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.tar.gz
 tar -xf elasticsearch-1.7.2.tar.gz
-cp -r conf/elasticsearch/sample_data/* elasticsearch-1.7.2/data/
+cp -r conf/elasticsearch/sample_data/ elasticsearch-1.7.2/data/
 ./elasticsearch-1.7.2/bin/elasticsearch
 ```
 
@@ -50,8 +50,15 @@ curl -XPUT -H "Content-Type: application/json" --data @logstash/twitter_template
 Veja mais detalhes so sobre index template na documentação [Index Templates](https://www.elastic.co/guide/en/elasticsearch/reference/1.3/indices-templates.html)
 
 
-Na sequência siga os comandos abaixo para fazer o downloado do elasticsearch (versão 1.7.2) e inicia-lo.
+Será necessário criar sua chave de acesso no twitter. Para isso, acesso o [Twitter application] (https://apps.twitter.com/) e cria sua chave de acesso para substituir as variáveis abaixo no arquivo logstash-twitter.conf 
+```
+consumer_key => "%consumer_key%"
+consumer_secret => "%consumer_secret%"
+oauth_token => "%oauth_token%"
+oauth_token_secret => "%oauth_token_secret%"
+```
 
+Na sequência siga os comandos abaixo para fazer o downloado do elasticsearch (versão 1.7.2) e inicia-lo.
 ```
 wget https://download.elastic.co/logstash/logstash/logstash-1.5.4.tar.gz
 tar -xf logstash-1.5.4.tar.gz
@@ -68,3 +75,4 @@ tar -xf kibana-4.1.2-darwin-x64.tar.gz
 ./kibana-4.1.2-darwin-x64/bin/kibana
 ``
 
+Acessar a página http://localhost:5601/

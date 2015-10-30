@@ -8,6 +8,8 @@ A apresentação pode ser vista no link: [Monitoramento em tempo real com Elasti
 ## Referências
 Apresentação do Rodrigo Domingues sobre [Arquitetura Incremanetal] (http://pt.slideshare.net/RodrigoStefaniDoming/qcon-rio-2015-arquitetura-incremental) de um projeto de 1 milhão de linhas de código.
 
+[Codahale metrics] (http://metrics.dropwizard.io) que foi utilizado para criar métricas de runtime do código. Ver também o [ElasticsearchReporter] (https://github.com/elastic/elasticsearch-metrics-reporter-java) que foi utilizado para enviar as métricas para o elasticsearch. 
+
 
 ## Outras dicas
 Instalar o plugin head para facilitar na administração dos índices. Depois de instalar será necessário reiniciar o elasticsearch.
