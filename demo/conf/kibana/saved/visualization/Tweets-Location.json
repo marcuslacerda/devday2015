@@ -1,0 +1,10 @@
+{
+  "visState": "{\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"heatMaxZoom\":16,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"addTooltip\":true,\"spyPerPage\":10},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"coordinates.coordinates\",\"autoPrecision\":false,\"mapZoom\":2,\"mapCenter\":[15.114552871944102,0],\"precision\":2}}],\"listeners\":{}}", 
+  "description": "", 
+  "title": "Tweets Location", 
+  "version": 1, 
+  "savedSearchId": "Tweets", 
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}

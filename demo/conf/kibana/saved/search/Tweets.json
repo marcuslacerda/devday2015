@@ -1,0 +1,23 @@
+{
+  "sort": [
+    "@timestamp", 
+    "desc"
+  ], 
+  "hits": 0, 
+  "description": "", 
+  "title": "Tweets", 
+  "version": 1, 
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"[twitter-]YYYY.MM\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[]}"
+  }, 
+  "columns": [
+    "text", 
+    "place.country", 
+    "user.location", 
+    "user.name", 
+    "user.followers_count", 
+    "user.geo_enabled", 
+    "user.screen_name", 
+    "user.created_at"
+  ]
+}
