@@ -41,10 +41,10 @@ Esse comando irá gerar um output com status do seu servidor elasticserach, como
 
 ## Logstach
 
-Primeiro será necessário configurar algumas propriedades do indice twitter com os comandos abaixo. Isso registra no elasticsearch um template para o indice twitter.
+Primeiro será necessário configurar algumas propriedades do indice twitter com os comandos abaixo. Por exemplo, isso define o campo coordinates.coordinates como um [geo_point](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html). 
 ```
 curl -XDELETE localhost:9200/_template/twitter
-curl -XPUT -H "Content-Type: application/json" --data @logstash/twitter_template.json localhost:9200/_template/twitter
+curl -XPUT -H "Content-Type: application/json" --data @conf/logstash/twitter_template.json localhost:9200/_template/twitter
 
 ```
 Veja mais detalhes so sobre index template na documentação [Index Templates](https://www.elastic.co/guide/en/elasticsearch/reference/1.3/indices-templates.html)
