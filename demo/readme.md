@@ -1,6 +1,6 @@
 #Demo 
 
-Arquivo com detalhes de como executar a demo apresentada durante o evento que coleta tweets com as hashtag #ESDAVDAY2015 através do Logstash, indexando os documentos no Elasticsearch para visualização no Kibana
+Arquivo com detalhes de como executar a demo apresentada durante o evento que coleta tweets com as hashtag #ESDAVDAY2015 através do Logstash, indexando os documentos no Elasticsearch para visualização no Kibana. Exemplo baseando no https://github.com/elastic/examples/tree/master/ELK_twitter
 
 ## Prerequisitos
 * Testes realizados utilizando Mac OS X
